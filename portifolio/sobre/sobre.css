@@ -1,0 +1,67 @@
+/* Padrão */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000023f6;
+  line-height: 1.4;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+.container-sobre {
+  display: flex;
+  max-width: max-content;
+  margin: 5rem auto;
+  border-radius: 3rem;
+  box-shadow: 0 0 0.9rem black;
+  overflow: hidden;
+  height: 50rem;
+  background-color: #080432;
+
+  & .caixa-imagem {
+    & img {
+      width: 45rem;
+      height: 100%;
+    }
+  }
+
+  & .caixa-texto {
+    width: 65rem;
+    padding: 0 2rem;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+}
+
+.caixa-retorna {
+  margin-left: 8rem;
+
+  & a {
+    color: #fff;
+
+    & span {
+      font-size: 4.78rem;
+      font-weight: bold;
+
+      &:hover {
+        color: #674ed8;
+        transition: 0.3s;
+      }
+    }
+  }
+}

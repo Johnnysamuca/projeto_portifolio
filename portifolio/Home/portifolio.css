@@ -1,0 +1,78 @@
+/* Padrão */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000023f6;
+  line-height: 1.4;
+  color: #303030;
+  font-size: 1.6rem;
+  height: 100dvh;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  background-color: #080432;
+  padding: 2.5rem 3.9rem;
+  color: #fff;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0 1rem 0.8rem rgba(0, 0, 0, 0.3);
+
+  & h2 {
+    font-size: 2.76rem;
+  }
+
+  & .navegacao {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 2rem;
+    position: relative;
+
+    & .lista {
+      display: flex;
+      font-size: 2.3rem;
+      gap: 3.12rem;
+      list-style: none;
+      align-items: center;
+      justify-content: center;
+
+      & a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: rgb(77, 77, 202);
+          transition: 0.3s;
+        }
+      }
+    }
+
+    & span {
+      font-size: 2.3rem;
+      color: inherit;
+
+      &:hover {
+        transform: rotate(90deg);
+        transition: 0.6s;
+      }
+    }
+  }
+}
