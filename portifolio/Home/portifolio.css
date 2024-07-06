@@ -23,6 +23,12 @@ body {
   color: #303030;
   font-size: 1.6rem;
   height: 100dvh;
+
+  &::-webkit-scrollbar {
+    background-color: var(--secondary-color);
+    width: 1.3rem;
+    border-radius: 1rem;
+  }
 }
 
 html {
@@ -209,33 +215,39 @@ main {
       max-height: 29rem;
       overflow: auto;
 
-      & h3 {
-        text-align: center;
+      &::-webkit-scrollbar {
+        width: 1rem;
+        background-color: var(--secondary-color);
+        border-radius: 1rem;
       }
+    }
 
-      & .lista-skill {
+    & h3 {
+      text-align: center;
+    }
+
+    & .lista-skill {
+      display: flex;
+      flex-flow: column;
+      gap: 1.28rem;
+      font-size: 1.92rem;
+
+      & .item-listaSkill {
         display: flex;
-        flex-flow: column;
-        gap: 1.28rem;
-        font-size: 1.92rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.02rem;
+        list-style: none;
+        border-bottom: 1px solid var(--neutral);
+        height: 2.78rem;
+        padding-left: 2rem;
 
-        & .item-listaSkill {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 1.02rem;
-          list-style: none;
-          border-bottom: 1px solid var(--neutral);
-          height: 2.78rem;
-          padding-left: 2rem;
+        &:last-child {
+          border-bottom: none;
+        }
 
-          &:last-child {
-            border-bottom: none;
-          }
-
-          & svg {
-            width: 3rem;
-          }
+        & svg {
+          width: 3rem;
         }
       }
     }
