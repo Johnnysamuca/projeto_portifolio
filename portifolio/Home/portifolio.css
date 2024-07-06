@@ -1,3 +1,13 @@
+/* Variaveis */
+
+:root {
+  --primary-color: #080432;
+  --primary-color-light: #0f085e;
+  --secondary-color: #4d4dca;
+  --color-body: #000023f6;
+  --neutral: #fff;
+}
+
 /* Padrão */
 
 * {
@@ -8,7 +18,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #000023f6;
+  background-color: var(--color-body);
   line-height: 1.4;
   color: #303030;
   font-size: 1.6rem;
@@ -24,9 +34,9 @@ html {
 .cabecalho {
   display: flex;
   align-items: center;
-  background-color: #080432;
+  background-color: var(--primary-color);
   padding: 2.5rem 3.9rem;
-  color: #fff;
+  color: var(--neutral);
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -41,7 +51,7 @@ html {
   & .navegacao {
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--neutral);
     gap: 2rem;
     position: relative;
 
@@ -59,7 +69,7 @@ html {
         font-weight: bold;
 
         &:hover {
-          color: rgb(77, 77, 202);
+          color: var(--secondary-color);
           transition: 0.3s;
         }
       }
@@ -72,6 +82,161 @@ html {
       &:hover {
         transform: rotate(90deg);
         transition: 0.6s;
+      }
+    }
+  }
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-flow: column;
+  gap: 7.63rem;
+  justify-content: center;
+  align-items: center;
+
+  & .container {
+    margin-top: 15rem;
+    width: 80rem;
+    position: relative;
+
+    & .container-card-projeto {
+      display: flex;
+      gap: 1.6rem;
+      overflow: hidden;
+
+      & .caixa-projeto {
+        border-radius: 2rem;
+        overflow: hidden;
+        background-color: var(--primary-color-light);
+        color: var(--neutral);
+        min-width: calc(calc(100% - 1.6rem) / 2);
+        transition: all 0.5s ease-in;
+        max-width: 29.2rem;
+
+        & .caixa-descricao {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          gap: 1.02rem;
+          padding: 0.65rem;
+
+          & .btn {
+            background-color: var(--secondary-color);
+            border-radius: 1.6rem;
+            padding: 0.65rem 0.82rem;
+            color: var(--neutral);
+            font-weight: 600;
+            font-size: 1.92rem;
+            text-decoration: none;
+            padding: 0.65rem 2.3rem;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+              background-color: var(--primary-color);
+            }
+          }
+        }
+
+        & img {
+          width: 100%;
+          height: 19.5rem;
+        }
+      }
+    }
+
+    & .btn-seta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5rem;
+      height: 5rem;
+      font-size: 1.92rem;
+      font-weight: 600;
+      background-color: var(--secondary-color);
+      color: var(--neutral);
+      border-radius: 50%;
+      position: absolute;
+      cursor: pointer;
+
+      &.seta-esquerda {
+        left: 0;
+        transform: translate(-200%, 16.3rem);
+      }
+
+      &.seta-direita {
+        right: 0;
+        transform: translate(200%, 16.3rem);
+      }
+    }
+  }
+
+  & .container-skills {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3.12rem 2.5rem;
+    color: var(--neutral);
+
+    & .caixa-titulo {
+      max-width: 50rem;
+
+      & h2 {
+        position: relative;
+        padding-left: 1.6rem;
+
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          width: 0.54rem;
+          height: 100%;
+          margin-right: 1.6rem;
+          background-color: var(--secondary-color);
+        }
+      }
+    }
+
+    & .caixa-cardSkill {
+      display: flex;
+      flex-flow: column;
+      gap: 1.28rem;
+      padding: 1rem 0;
+      min-width: 30rem;
+      background-color: var(--primary-color-light);
+      border-radius: 2rem;
+      max-height: 29rem;
+      overflow: auto;
+
+      & h3 {
+        text-align: center;
+      }
+
+      & .lista-skill {
+        display: flex;
+        flex-flow: column;
+        gap: 1.28rem;
+        font-size: 1.92rem;
+
+        & .item-listaSkill {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1.02rem;
+          list-style: none;
+          border-bottom: 1px solid var(--neutral);
+          height: 2.78rem;
+          padding-left: 2rem;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          & svg {
+            width: 3rem;
+          }
+        }
       }
     }
   }
