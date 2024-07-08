@@ -1,4 +1,15 @@
-const cardProjeto = document.getElementsByClassName("caixa-projeto");
-const setaDireita = document.querySelector(".seta-direita");
+const containerCard = document.querySelector(".container-card-projeto");
+const container = document.querySelector(".container");
+const setaDireta = document.querySelector(".seta-direita");
+const setaEsquerda = document.querySelector(".seta-esquerda");
 
-setaDireita.addEventListener("click", function () {});
+function nextCard() {
+  containerCard.scrollLeft += containerCard.clientWidth + 22;
+}
+
+function previousCard() {
+  containerCard.scrollLeft -= containerCard.clientWidth + 22;
+}
+
+setaDireta.addEventListener("click", nextCard);
+setaEsquerda.addEventListener("click", previousCard);
