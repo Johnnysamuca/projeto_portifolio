@@ -135,6 +135,10 @@ main {
 
           & .descricao-txt {
             min-height: 115.95px;
+
+            & span {
+              font-weight: 700;
+            }
           }
 
           & .btn {
@@ -169,6 +173,10 @@ main {
       border-radius: 50%;
       position: absolute;
       cursor: pointer;
+
+      &:active {
+        background-color: var(--primary-color-light);
+      }
 
       &.seta-esquerda {
         left: 0;
@@ -208,21 +216,26 @@ main {
       }
     }
 
-    & .caixa-cardSkill {
+    & .container-carSkill {
       display: flex;
-      flex-flow: column;
-      gap: 1.28rem;
-      padding: 1rem 0;
-      min-width: 30rem;
-      background-color: var(--primary-color-light);
-      border-radius: 2rem;
-      max-height: 29rem;
-      overflow: auto;
+      gap: 1rem;
 
-      &::-webkit-scrollbar {
-        width: 1rem;
-        background-color: var(--secondary-color);
-        border-radius: 1rem;
+      & .caixa-cardSkill {
+        display: flex;
+        flex-flow: column;
+        gap: 1.28rem;
+        padding: 1rem 0;
+        min-width: 30rem;
+        background-color: var(--primary-color-light);
+        border-radius: 2rem;
+        max-height: 29rem;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+          width: 1rem;
+          background-color: var(--secondary-color);
+          border-radius: 1rem;
+        }
       }
     }
 

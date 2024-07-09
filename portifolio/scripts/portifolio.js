@@ -4,11 +4,11 @@ const setaDireta = document.querySelector(".seta-direita");
 const setaEsquerda = document.querySelector(".seta-esquerda");
 
 function nextCard() {
-  containerCard.scrollLeft += containerCard.clientWidth + 22;
+  containerCard.scrollLeft += containerCard.clientWidth + 16;
 }
 
 function previousCard() {
-  containerCard.scrollLeft -= containerCard.clientWidth + 22;
+  containerCard.scrollLeft -= containerCard.clientWidth + 16;
 }
 
 setaDireta.addEventListener("click", nextCard);
