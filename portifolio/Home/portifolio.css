@@ -278,7 +278,7 @@ main {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100dvh;
     background-color: var(--primary-color);
     margin-top: 8rem;
     scroll-behavior: smooth;
