@@ -1,0 +1,35 @@
+@media (max-width: 999px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  & .container-skills {
+    flex-flow: column;
+    justify-content: start;
+    gap: 6.1rem;
+
+    & .caixa-titulo {
+      align-self: center;
+    }
+
+    & .container-carSkill {
+      align-self: center;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+
+  & .container {
+    & .btn-seta {
+      width: 0.5vw;
+      height: 0.5vh;
+      &.seta-esquerda {
+        transform: translate(-125%, 16.3rem) !important;
+      }
+
+      &.seta-direita {
+        transform: translate(125%, 16.3rem) !important;
+      }
+    }
+  }
+}

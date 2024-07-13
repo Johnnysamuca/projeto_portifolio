@@ -1,0 +1,33 @@
+@media (max-width: 767px) {
+  & .cabecalho {
+    & .navegacao {
+      & .lista {
+        display: none;
+      }
+
+      & .icone-menu {
+        display: block;
+      }
+    }
+  }
+
+  main {
+    & .container {
+      & .container-card-projeto {
+        & .caixa-projeto {
+          min-width: calc(calc(100% - 1.6rem) / 1);
+        }
+      }
+    }
+
+    & .container-skills {
+      & .caixa-titulo {
+      }
+
+      & .container-carSkill {
+        flex-flow: column;
+        align-items: center;
+      }
+    }
+  }
+}

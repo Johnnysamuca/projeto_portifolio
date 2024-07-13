@@ -1,0 +1,15 @@
+@media (max-width: 607px) {
+  & .container {
+    & .btn-seta {
+      width: 0.3vw;
+      height: 0.3vh;
+      &.seta-esquerda {
+        transform: translate(-115%, 16.3rem) !important;
+      }
+
+      &.seta-direita {
+        transform: translate(90%, 16.3rem) !important;
+      }
+    }
+  }
+}

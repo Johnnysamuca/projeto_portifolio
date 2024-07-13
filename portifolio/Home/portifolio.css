@@ -81,14 +81,9 @@ html {
       }
     }
 
-    & span {
-      font-size: 2.3rem;
-      color: inherit;
-
-      &:hover {
-        transform: rotate(90deg);
-        transition: 0.6s;
-      }
+    & .icone-menu {
+      display: none;
+      font-size: 2.76rem;
     }
   }
 }
@@ -104,13 +99,15 @@ main {
 
   & .container {
     margin-top: 15rem;
-    width: 80rem;
+    max-width: 80vw;
     position: relative;
 
     & .container-card-projeto {
       display: flex;
       gap: 1.6rem;
       overflow: hidden;
+      scroll-behavior: smooth;
+      width: 100%;
 
       & .caixa-projeto {
         border-radius: 2rem;
@@ -218,7 +215,7 @@ main {
 
     & .container-carSkill {
       display: flex;
-      gap: 1rem;
+      gap: 3.12rem;
 
       & .caixa-cardSkill {
         display: flex;
@@ -265,6 +262,43 @@ main {
 
         & svg {
           width: 3rem;
+        }
+      }
+    }
+  }
+}
+
+/* Menu lateral */
+
+.menu-lateral {
+  display: none;
+
+  &.aberto {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: var(--primary-color);
+    margin-top: 8rem;
+    scroll-behavior: smooth;
+
+    & .menuLateralista {
+      & a {
+        color: var(--neutral);
+        text-decoration: none;
+        width: 100%;
+        font-size: 1.92rem;
+
+        & li {
+          list-style: none;
+          padding: 5rem;
+          transition: all 0.3s ease-in;
+          border-bottom: 0.65px solid var(--neutral);
+
+          &:hover {
+            background-color: var(--primary-color-light);
+          }
         }
       }
     }
