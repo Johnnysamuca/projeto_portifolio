@@ -21,12 +21,13 @@ html {
 main {
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 5rem;
 }
 
 .container-sobre {
   display: flex;
-  max-width: max-content;
-  margin: 5rem auto;
+  max-width: 100rem;
   border-radius: 3rem;
   box-shadow: 0 0 0.9rem black;
   overflow: hidden;
@@ -35,7 +36,7 @@ main {
 
   & .caixa-imagem {
     & img {
-      width: 45rem;
+      max-width: 45rem;
       height: 100%;
     }
   }
@@ -44,13 +45,11 @@ main {
     width: 65rem;
     padding: 0 2rem;
     line-height: 1.6;
-    padding: 1rem;
   }
 }
 
 .caixa-retorna {
-  margin-left: 8rem;
-
+  transform: translateX(-2rem);
   & a {
     color: #fff;
 
