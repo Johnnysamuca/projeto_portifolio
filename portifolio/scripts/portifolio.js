@@ -4,6 +4,7 @@ const setaDireta = document.querySelector(".seta-direita");
 const setaEsquerda = document.querySelector(".seta-esquerda");
 const menuIcone = document.querySelector(".icone-menu");
 const menuLateral = document.querySelector(".menu-lateral");
+const contato = document.querySelector(".contato");
 
 function nextCard() {
   if (document.documentElement.clientWidth > 767) {
@@ -29,6 +30,12 @@ function openMenu() {
   }
 }
 
+function copyEmail() {
+  const email = "johnnysamuel486@gmail.com";
+  navigator.clipboard.writeText(email);
+}
+
 menuIcone.addEventListener("click", openMenu);
 setaDireta.addEventListener("click", nextCard);
 setaEsquerda.addEventListener("click", previousCard);
+contato.addEventListener("click", copyEmail);
