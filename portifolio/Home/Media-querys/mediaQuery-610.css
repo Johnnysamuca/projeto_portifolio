@@ -1,14 +1,40 @@
 @media (max-width: 607px) {
   & .container {
     & .btn-seta {
-      width: 0.3vw;
-      height: 0.3vh;
+      width: 1.6rem;
+      height: 1.6rem;
       &.seta-esquerda {
-        transform: translate(-115%, 16.3rem) !important;
+        transform: translate(-70%, 16.3rem) !important;
       }
 
       &.seta-direita {
-        transform: translate(90%, 16.3rem) !important;
+        transform: translate(40%, 16.3rem) !important;
+      }
+    }
+  }
+
+  & main {
+    & .container-skills {
+      & .caixa-titulo {
+        & h2 {
+          &::before {
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+          }
+        }
+      }
+
+      & .sobre {
+        & .container {
+          width: 100%;
+        }
+      }
+    }
+
+    & .certificados {
+      & .caixa-certificados {
+        flex-flow: column;
       }
     }
   }

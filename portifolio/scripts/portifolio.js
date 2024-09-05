@@ -30,7 +30,8 @@ function openMenu() {
   }
 }
 
-function copyEmail() {
+function copyEmail(e) {
+  e.preventDefault();
   const email = "johnnysamuel486@gmail.com";
   navigator.clipboard.writeText(email);
 }
