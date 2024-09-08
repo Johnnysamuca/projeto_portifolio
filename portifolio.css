@@ -23,6 +23,7 @@ body {
   color: #303030;
   font-size: 1.6rem;
   height: 100dvh;
+  position: relative;
 
   &::-webkit-scrollbar {
     background-color: var(--secondary-color);
@@ -389,5 +390,23 @@ main {
         }
       }
     }
+  }
+}
+
+.aba-suspenca {
+  display: none;
+
+  &.aberta {
+    display: block;
+    position: absolute;
+    top: 6rem;
+    transform: translateX(90%);
+    background-color: var(--secondary-color);
+    font-size: 3.12rem;
+    color: var(--neutral);
+    z-index: 99999;
+    padding: 1.02rem 2rem;
+    border-radius: 1rem;
+    font-weight: 700;
   }
 }
