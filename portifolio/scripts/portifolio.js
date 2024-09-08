@@ -5,6 +5,7 @@ const setaEsquerda = document.querySelector(".seta-esquerda");
 const menuIcone = document.querySelector(".icone-menu");
 const menuLateral = document.querySelector(".menu-lateral");
 const contato = document.querySelector(".contato");
+const sobre = document.querySelector(".item-lista--sobre");
 
 function nextCard() {
   if (document.documentElement.clientWidth > 767) {
@@ -36,7 +37,16 @@ function copyEmail(e) {
   navigator.clipboard.writeText(email);
 }
 
+function aboutScrolling(e) {
+  e.preventDefault();
+  window.scrollBy({
+    top: window.innerHeight + 350,
+    behavior: "smooth",
+  });
+}
+
 menuIcone.addEventListener("click", openMenu);
 setaDireta.addEventListener("click", nextCard);
 setaEsquerda.addEventListener("click", previousCard);
 contato.addEventListener("click", copyEmail);
+sobre.addEventListener("click", aboutScrolling);
