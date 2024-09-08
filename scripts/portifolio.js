@@ -50,6 +50,8 @@ function aboutScrolling(e) {
     top: window.innerHeight + 350,
     behavior: "smooth",
   });
+
+  sobre.removeEventListener("click", aboutScrolling);
 }
 
 const imagem1 = "../assets/imagem-1.jpg";
