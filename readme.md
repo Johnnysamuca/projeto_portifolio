@@ -1,6 +1,7 @@
 <h1>Bem-vindo(a) ao meu portifolio 👍</h1>
 
 <h1>
+<<<<<<< HEAD
 <img src="./imagem-portifólio.png"></img>
 </h1>
 
