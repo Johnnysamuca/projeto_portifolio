@@ -1,7 +1,7 @@
 <h1>Bem-vindo(a) ao meu portifolio 👍</h1>
 
 <h1>
-<img src="./assets/imagem-portifólio.png"></img>
+[imagem-portifólio](https://github.com/user-attachments/assets/04f67599-dfd7-4208-a195-5169f8655dda)
 </h1>
 
 ## Sobre 📕
