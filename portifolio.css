@@ -393,6 +393,10 @@ main {
   }
 }
 
+.headline {
+  visibility: hidden;
+}
+
 .aba-suspenca {
   display: none;
 

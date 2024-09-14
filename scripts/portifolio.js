@@ -73,6 +73,9 @@ function changeImage() {
 
 setInterval(changeImage, 3000);
 
+window.sr = ScrollReveal({ reset: true });
+sr.reveal(".headline", { duration: 2500 });
+
 menuIcone.addEventListener("click", openMenu);
 setaDireta.addEventListener("click", nextCard);
 setaEsquerda.addEventListener("click", previousCard);
