@@ -33,7 +33,7 @@
     }
 
     & .certificados {
-      & .caixa-certificados {
+      & .container-certificado {
         flex-flow: column;
       }
     }
