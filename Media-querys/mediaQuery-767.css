@@ -41,6 +41,7 @@
     & .sobre {
       display: flex;
       height: 100%;
+
       & .container {
         gap: 3.12rem;
         width: 70%;
@@ -79,5 +80,25 @@
         justify-content: start;
       }
     }
+  }
+}
+
+.aba-suspenca {
+  display: none;
+
+  &.aberta {
+    display: block;
+    position: fixed;
+    text-align: center;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    font-size: 2.3rem;
+    color: var(--neutral);
+    z-index: 99999;
+    padding: 1.02rem 2rem;
+    border-radius: 1rem;
+    font-weight: 700;
   }
 }

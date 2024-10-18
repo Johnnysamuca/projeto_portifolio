@@ -70,10 +70,12 @@ html {
       align-items: center;
       justify-content: center;
 
-      & a {
+      & li,
+      a {
         color: inherit;
         text-decoration: none;
         font-weight: bold;
+        cursor: pointer;
 
         &:hover {
           color: var(--secondary-color);
@@ -378,22 +380,24 @@ main {
     margin-top: 8rem;
 
     & .menuLateralista {
-      & a {
+      & li {
+        list-style: none;
+        padding: 3.7rem;
+        transition: all 0.3s ease-in;
+        border-bottom: 0.65px solid var(--neutral);
+        height: 20.9dvh;
         color: var(--neutral);
-        text-decoration: none;
-        width: 100%;
         font-size: 1.92rem;
 
-        & li {
-          list-style: none;
-          padding: 3.7rem;
-          transition: all 0.3s ease-in;
-          border-bottom: 0.65px solid var(--neutral);
-          height: 20.9dvh;
+        & a {
+          color: var(--neutral);
+          text-decoration: none;
+          width: 100%;
+          font-size: 1.92rem;
+        }
 
-          &:hover {
-            background-color: var(--primary-color-light);
-          }
+        &:hover {
+          background-color: var(--primary-color-light);
         }
       }
     }

@@ -5,7 +5,9 @@ const setaEsquerda = document.querySelector(".seta-esquerda");
 const menuIcone = document.querySelector(".icone-menu");
 const menuLateral = document.querySelector(".menu-lateral");
 const contato = document.querySelector(".contato");
+const contatoMobile = document.querySelector(".contatoMobile");
 const sobre = document.querySelector(".item-lista--sobre");
+const sobreMobile = document.querySelector(".item-lista--sobreMobile");
 const abaSuspenca = document.querySelector(".aba-suspenca");
 const img = document.querySelector(".img");
 
@@ -44,14 +46,19 @@ function copyEmailAndOpenTabSuspend(e) {
   }, "2000");
 }
 
-function aboutScrolling(e) {
-  e.preventDefault();
-  window.scrollBy({
-    top: window.innerHeight + 350,
-    behavior: "smooth",
-  });
+function aboutScrolling() {
+  const sectionSobre = document.querySelector(".sobre"); // Verifique o nome da classe
 
-  sobre.removeEventListener("click", aboutScrolling);
+  if (sectionSobre) {
+    const sobrePosition = sectionSobre.offsetTop;
+
+    window.scrollTo({
+      top: sobrePosition,
+      behavior: "smooth",
+    });
+  } else {
+    console.error("Elemento '.sobre' não encontrado!");
+  }
 }
 
 const imagem1 = "../assets/imagem-1.jpg";
@@ -80,4 +87,6 @@ menuIcone.addEventListener("click", openMenu);
 setaDireta.addEventListener("click", nextCard);
 setaEsquerda.addEventListener("click", previousCard);
 contato.addEventListener("click", copyEmailAndOpenTabSuspend);
+contatoMobile.addEventListener("click", copyEmailAndOpenTabSuspend);
 sobre.addEventListener("click", aboutScrolling);
+sobreMobile.addEventListener("click", aboutScrolling);
