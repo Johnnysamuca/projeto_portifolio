@@ -420,7 +420,7 @@ main {
 
   &.aberta {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 6rem;
     transform: translateX(90%);
     background-color: var(--secondary-color);

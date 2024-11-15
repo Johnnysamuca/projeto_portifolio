@@ -32,4 +32,10 @@
       }
     }
   }
+
+  .aba-suspenca {
+    &.aberta {
+      transform: translateX(42%);
+    }
+  }
 }
